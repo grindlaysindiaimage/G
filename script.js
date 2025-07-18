@@ -1,5 +1,5 @@
 const products = [
-  { name: "Piston Ring", image: "images/CYL IR 1.75 _234_.png" },
+  { name: "Piston Ring", id: "1ScvDW-Z8Bf7kHrf7ARYPRNVOU1IRD5OX" },
   { name: "Valve Spring", image: "images/CYL IR 1.75 _234_.png" },
   { name: "Oil Seal", image: "images/CYL IR 1.75 _234_.png" }
 ];
