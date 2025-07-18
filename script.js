@@ -1,5 +1,13 @@
 const products = [
 { name: "CYL IR 1.75 _234_", image: "images/CYL IR 1.75 _234_.png" },
+{ name: "CYL IR 1.75 (2340)", image: "images/CYL IR 1.75 (2340).png" },
+{ name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png" },
+{ name: "CYL IR 2.5 (2475)", image: "images/CYL IR 2.5 (2475).png" },
+{ name: "CYL IR 2.75 (2545)", image: "images/CYL IR 2.75 (2545).png" },
+{ name: "images/CYL IR 3 (234)", image: "images/CYL IR 3 (234).png" },
+  { name: "CYL IR 3 (253) F Line", image: "images/CYL IR 3 (253) F Line.png" },
+
+  
   { name: "Valve Spring", image: "images/CYL IR 1.75 _234_.png" },
   { name: "Oil Seal", image: "images/CYL IR 1.75 _234_.png" }
 ];
