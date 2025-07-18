@@ -1,5 +1,5 @@
 const products = [
-{ name: "CYL IR 1.75 _234_", image: "images/CYL IR 1.75 _234_.png" },
+{ name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png" },
 { name: "CYL IR 1.75 (2340)", image: "images/CYL IR 1.75 (2340).png" },
 { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png" },
 { name: "CYL IR 2.5 (2475)", image: "images/CYL IR 2.5 (2475).png" },
@@ -8,8 +8,8 @@ const products = [
   { name: "CYL IR 3 (253) F Line", image: "images/CYL IR 3 (253) F Line.png" },
 
   
-  { name: "Demo", image: "images/CYL IR 1.75 _234_.png" },
-  { name: "Demo", image: "images/CYL IR 1.75 _234_.png" }
+  { name: "Demo", image: "images/CYL IR 1.75 (234).png" },
+  { name: "Demo", image: "images/CYL IR 1.75 (234).png" }
 ];
 
 const gallery = document.getElementById("gallery");
