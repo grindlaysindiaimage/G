@@ -8,8 +8,8 @@ const products = [
   { name: "CYL IR 3 (253) F Line", image: "images/CYL IR 3 (253) F Line.png" },
 
   
-  { name: "Valve Spring", image: "images/CYL IR 1.75 _234_.png" },
-  { name: "Oil Seal", image: "images/CYL IR 1.75 _234_.png" }
+  { name: "Demo", image: "images/CYL IR 1.75 _234_.png" },
+  { name: "Demo", image: "images/CYL IR 1.75 _234_.png" }
 ];
 
 const gallery = document.getElementById("gallery");
