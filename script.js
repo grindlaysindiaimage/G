@@ -1,5 +1,5 @@
 const products = [
-{ name: "Cylinder", image: "images/Cylinder.png" },
+
   { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png" },
 { name: "CYL IR 1.75 (2340)", image: "images/CYL IR 1.75 (2340).png" },
 { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png" },
