@@ -1,23 +1,14 @@
 body {
   font-family: Arial, sans-serif;
+  padding: 20px;
   margin: 0;
-  padding: 20px 20px 20px 100px;
-  background-color: #fffde7; /* light yellow background */
-}
-
-#fixedLeftImage {
-  position: fixed;
-  left: 10px;
-  top: 10px;
-  width: 80px;
-  height: auto;
-  z-index: 1000;
+  background-color: #fffde7; /* light yellow background for whole page */
 }
 
 #searchBarWrapper {
   position: sticky;
   top: 0;
-  background-color: #fff9c4; /* lighter yellow */
+  background-color: #fff9c4; /* lighter yellow for sticky search bar */
   padding: 10px 0;
   z-index: 1000;
   border-bottom: 1px solid #ccc;
@@ -31,31 +22,19 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  margin-top: 0;
-}
-
-.section-heading {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #444;
-  font-size: 22px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .product {
   text-align: center;
   width: 150px;
   word-wrap: break-word;
-  background-color: #fffde7;
+  overflow-wrap: break-word;
+  background-color: #fffde7; /* light yellow background per product */
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -73,4 +52,6 @@ h1 {
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.2;
+  word-wrap: break-word;
+  white-space: normal;
 }
