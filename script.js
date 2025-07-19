@@ -43,7 +43,11 @@ const products = [
   { name: "G-EAC-009  (BEARING WASHER 5HP )", image: "images/G-EAC-009.jpeg" },
   { name: "G-EAC-010  (BREATHER VALVE )", image: "images/G-EAC-010.jpeg" },
   { name: "G-EAC-011  (BUSH 3HP. )", image: "images/G-EAC-011.jpeg" },
-  // ... continue rest as is
+
+
+
+
+  
   { name: "Demo", image: "images/CYL IR 1.75 (234).png" },
   { name: "Demo", image: "images/CYL IR 1.75 (234).png" }
 ];
