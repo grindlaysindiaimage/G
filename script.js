@@ -1,5 +1,4 @@
 const products = [
-  // Cylinder Products
   { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png" },
   { name: "CYL IR 1.75 (2340)", image: "images/CYL IR 1.75 (2340).png" },
   { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png" },
@@ -16,7 +15,6 @@ const products = [
   { name: "CYL IR 5 T Line", image: "images/CYL IR 5 T Line.png" },
   { name: "CYL IR 5.5", image: "images/CYL IR 5.5.png" },
 
-  // Piston Products
   { name: "PISTON IR 1.75(234) (C.I.)", image: "images/PISTON IR 1.75(234) (C.I.).png" },
   { name: "PISTON IR 1.75(2340) (C.I.)", image: "images/PISTON IR 1.75(2340) (C.I.).png" },
   { name: "PISTON IR 2.5 (242) (C.I.)", image: "images/PISTON IR 2.5 (242) (C.I.).png" },
@@ -34,35 +32,32 @@ const products = [
   { name: "PISTON IR 5 NT (2545)", image: "images/PISTON IR 5 NT (2545).png" },
   { name: "PISTON IR 5 OT (25.4mm)", image: "images/PISTON IR 5 OT (25.4mm).png" },
   { name: "PISTON IR 5 OT (30mm)", image: "images/PISTON IR 5 OT (30mm).png" },
-  { name: "PISTON IR 5.5", image: "images/PISTON IR 5.5.png" }
+  { name: "PISTON IR 5.5", image: "images/PISTON IR 5.5.png" },
+
+  { name: "Demo", image: "images/CYL IR 1.75 (234).png" },
+  { name: "Demo", image: "images/CYL IR 1.75 (234).png" }
 ];
 
-const cylinderGallery = document.getElementById("cylinderGallery");
-const pistonGallery = document.getElementById("pistonGallery");
+const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("searchInput");
 
-function displayProducts() {
-  const query = searchInput.value.toLowerCase();
-  cylinderGallery.innerHTML = "";
-  pistonGallery.innerHTML = "";
-
-  products.forEach(product => {
-    if (!product.name.toLowerCase().includes(query)) return;
-
+function displayProducts(productList) {
+  gallery.innerHTML = "";
+  productList.forEach(product => {
     const div = document.createElement("div");
     div.className = "product";
     div.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <p>${product.name}</p>
     `;
-
-    if (product.name.startsWith("CYL")) {
-      cylinderGallery.appendChild(div);
-    } else if (product.name.startsWith("PISTON")) {
-      pistonGallery.appendChild(div);
-    }
+    gallery.appendChild(div);
   });
 }
 
-searchInput.addEventListener("input", displayProducts);
-window.addEventListener("DOMContentLoaded", displayProducts);
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+  displayProducts(filtered);
+});
+
+displayProducts(products);
