@@ -1,15 +1,37 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  margin: 0;
 }
+
+#searchBarWrapper {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 20px;
+  z-index: 999;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 20px;
 }
+
 .product {
   text-align: center;
 }
+
 .product img {
   width: 150px;
   height: auto;
