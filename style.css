@@ -2,6 +2,14 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
+  background-color: yellow; /* yellow background */
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -11,9 +19,10 @@ body {
 #searchBarWrapper {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: yellow;
   padding: 10px 0;
   z-index: 1000;
+  text-align: center;
 }
 
 #searchInput {
@@ -29,21 +38,28 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .product {
   text-align: center;
   width: 150px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  border: 2px solid #333;        /* Border for product box */
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.1); /* Zoom on hover */
+  cursor: pointer;
 }
 
 .product img {
-  width: 150px;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  border: 2px solid #333;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .product p {
