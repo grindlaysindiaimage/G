@@ -69,7 +69,7 @@ const products = [
   { name: "G-EAC-027  (END DISK 5HP. )", image: "images/G-EAC-027.jpeg" },
     { name: "G-EAC-028  (FAN 2HP. )", image: "images/Blank.png" },
     { name: "G-EAC-029  (FAN 3HP. )", image: "images/Blank.png" },
-    { name: "G-EAC-030  (FAN 5HP. & 10HP. )", image: "images/Blank.png" },
+    { name: "G-EAC-030  (FAN 5HP. & 10HP.)", image: "images/Blank.png" },
 { name: "G-EAC-031  (INTER COOLER 2D )", image: "images/G-EAC-031.png" },
 { name: "G-EAC-032  (INTER COOLER SC-100 )", image: "images/G-EAC-032.jpeg" },
 { name: "G-EAC-033  (INTER COOLER SC-50 )", image: "images/G-EAC-033.jpeg" },
@@ -121,10 +121,6 @@ const products = [
 { name: "G-EAC-076  (SAFETY VALVE 1/4 )", image: "images/G-EAC-076.jpeg" },
 { name: "G-EAC-077  (SAFETY VALVE 3/4 )", image: "images/G-EAC-077.jpeg" },
 { name: "G-EAC-078  (SAFETY VALVE 3/8 )", image: "images/G-EAC-078.jpeg" },
-
-
-
-
 
   
   { name: "Demo", image: "images/CYL IR 1.75 (234).png" },
