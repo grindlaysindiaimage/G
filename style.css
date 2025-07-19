@@ -2,16 +2,14 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
-  background-color: #fffde7; /* light yellow background for whole page */
 }
 
 #searchBarWrapper {
   position: sticky;
   top: 0;
-  background-color: #fff9c4; /* lighter yellow for sticky search bar */
+  background-color: white;
   padding: 10px 0;
   z-index: 1000;
-  border-bottom: 1px solid #ccc;
 }
 
 #searchInput {
@@ -32,20 +30,16 @@ body {
 .product {
   text-align: center;
   width: 150px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  background-color: #fffde7; /* light yellow background per product */
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  word-wrap: break-word; /* allows wrapping in smaller containers */
+  overflow-wrap: break-word; /* ensures long words break */
 }
 
 .product img {
   width: 150px;
   height: auto;
   border-radius: 8px;
-  border: 2px solid #333;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #333; /* black border around image */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* optional shadow */
 }
 
 .product p {
