@@ -44,7 +44,7 @@ body {
 .product {
   text-align: center;
   width: 150px;
-  border: 2px solid #333;        /* Border for product box */
+  border: 2px solid #333;
   border-radius: 8px;
   background-color: white;
   padding: 10px;
@@ -52,7 +52,7 @@ body {
 }
 
 .product:hover {
-  transform: scale(1.1); /* Zoom on hover */
+  transform: scale(1.1);
   cursor: pointer;
 }
 
