@@ -1,50 +1,76 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f8f9fa;
+  margin: 0;
+  padding: 20px 20px 20px 100px;
+  background-color: #fffde7; /* light yellow background */
+}
+
+#fixedLeftImage {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  width: 80px;
+  height: auto;
+  z-index: 1000;
+}
+
+#searchBarWrapper {
+  position: sticky;
+  top: 0;
+  background-color: #fff9c4; /* lighter yellow */
+  padding: 10px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc;
 }
 
 #searchInput {
   padding: 10px;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 20px;
   font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .section-heading {
-  font-size: 24px;
   margin-top: 40px;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 20px;
+  color: #444;
+  font-size: 22px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 5px;
-  text-transform: uppercase;
 }
 
-.gallery-group {
+.gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .product {
-  width: 150px;
   text-align: center;
-  background: white;
+  width: 150px;
+  word-wrap: break-word;
+  background-color: #fffde7;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .product img {
-  width: 100%;
+  width: 150px;
   height: auto;
-  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #333;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product p {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 14px;
-  color: #555;
+  line-height: 1.2;
 }
