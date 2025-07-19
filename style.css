@@ -19,7 +19,7 @@ body {
 #searchBarWrapper {
   position: sticky;
   top: 0;
-  background-color: yellow;
+  background-color: #fff9c4; /* MATCHED to body */
   padding: 10px 0;
   z-index: 1000;
   text-align: center;
