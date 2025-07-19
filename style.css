@@ -2,6 +2,19 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.section-title {
+  margin-top: 40px;
+  color: #444;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
 }
 
 #searchBarWrapper {
@@ -18,6 +31,8 @@ body {
   max-width: 400px;
   font-size: 16px;
   box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
 }
 
 .gallery {
@@ -30,16 +45,19 @@ body {
 .product {
   text-align: center;
   width: 150px;
-  word-wrap: break-word; /* allows wrapping in smaller containers */
-  overflow-wrap: break-word; /* ensures long words break */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-  width: 150px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 2px solid #333; /* black border around image */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* optional shadow */
+  border: 2px solid #333;
 }
 
 .product p {
