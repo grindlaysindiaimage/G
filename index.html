@@ -8,28 +8,23 @@
 </head>
 <body>
 
-  <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- Search Bar + Category Dropdown -->
   <div class="container">
     <div id="searchBarWrapper">
-      <input type="text" id="searchInput" placeholder="Search Products">
-
-      <!-- ▼▼▼ Icon Button + Dropdown -->
-      <div class="dropdown-wrapper">
-        <button id="categoryToggle">&#x25BC;&#x25BC;&#x25BC;</button>
-        <div id="categoryMenu">
-          <div class="category-option">Piston Ring</div>
-          <div class="category-option">Piston</div>
-          <div class="category-option">Cylinder Block</div>
-          <div class="category-option">Liner</div>
-          <div class="category-option">Elgi Compressor Item</div>
-        </div>
+      <div class="search-dropdown-container">
+        <input type="text" id="searchInput" placeholder="Search Products">
+        <button id="dropdownToggle">☰</button>
+        <ul id="dropdownList" class="hidden">
+          <li data-category="Piston Ring">Piston Ring</li>
+          <li data-category="Piston">Piston</li>
+          <li data-category="Cylinder Block">Cylinder Block</li>
+          <li data-category="Liner">Liner</li>
+          <li data-category="Elgi Compressor Item">Elgi Compressor Item</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Product Gallery -->
     <div class="gallery" id="gallery"></div>
   </div>
 
