@@ -17,20 +17,15 @@ body {
 }
 
 #searchBarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   position: sticky;
   top: 0;
   background-color: #fff9c4;
   padding: 10px 0;
   z-index: 1000;
-  text-align: center;
-}
-
-.search-dropdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  position: relative;
 }
 
 #searchInput {
@@ -41,38 +36,26 @@ body {
   box-sizing: border-box;
 }
 
-#dropdownToggle {
-  padding: 10px;
+#menuToggle {
+  padding: 8px 12px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  margin: 5px 0;
   font-size: 16px;
   cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#dropdownList {
-  list-style: none;
-  padding: 5px 0;
-  margin: 5px 0 0 0;
-  position: absolute;
-  top: 45px;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 999;
-}
-
-#dropdownList li {
-  padding: 10px;
-  cursor: pointer;
-  text-align: left;
-}
-
-#dropdownList li:hover {
-  background-color: #f0f0f0;
 }
 
 .hidden {
