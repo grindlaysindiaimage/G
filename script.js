@@ -1,7 +1,7 @@
 const products = [
   { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png", category: "Cylinder Block" },
   { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png", category: "Cylinder Block" },
-  { name: "PISTON A234", image: "images/PISTON A234.png", category: "Piston" },
+  { name: "PISTON A001", image: "images/PISTON A234.png", category: "Piston" },
   { name: "PISTON RING STD", image: "images/PISTON RING STD.png", category: "Piston Ring" },
   { name: "LINER 78mm", image: "images/LINER 78mm.png", category: "Liner" },
   { name: "ELGI HEAD", image: "images/ELGI HEAD.png", category: "Elgi Compressor Item" }
