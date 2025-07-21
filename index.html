@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Product Gallery</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
   <div class="container">
+    <!-- Dropdown + Search + Menu -->
     <div id="searchBarWrapper">
-      <!-- Category Dropdown -->
-      <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="Cylinder">Cylinder</option>
+      <select id="categorySelect">
+        <option value="All">All Categories</option>
+        <option value="Piston Ring">Piston Ring</option>
         <option value="Piston">Piston</option>
-        <option value="Elgi">Elgi Compressor Part</option>
+        <option value="Cylinder Block">Cylinder Block</option>
+        <option value="Liner">Liner</option>
+        <option value="Elgi Compressor Item">Elgi Compressor Item</option>
       </select>
 
-      <!-- Search Box -->
-      <input type="text" id="searchInput" placeholder="Search Products" />
-
-      <!-- Menu Icon (optional toggle) -->
+      <input type="text" id="searchInput" placeholder="Search Products">
       <button id="menuToggle">☰</button>
     </div>
 
-    <!-- Product Gallery -->
     <div class="gallery" id="gallery"></div>
   </div>
 
