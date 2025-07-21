@@ -35,13 +35,16 @@ function renderProducts() {
     const img = document.createElement("img");
     img.src = product.image;
     img.alt = product.name;
+    img.onerror = () => {
+      img.src = "images/placeholder.png"; // fallback image if image not found
+      img.alt = "Image not available";
+    };
 
     const name = document.createElement("p");
     name.textContent = product.name;
 
     productDiv.appendChild(img);
     productDiv.appendChild(name);
-
     gallery.appendChild(productDiv);
   });
 }
