@@ -3,16 +3,15 @@ const products = [
   { name: "CYL IR 1.75 (234)", category: "Cylinder Block", image: "images/CYL IR 1.75 (234).png" },
   { name: "Piston Ring Set A", category: "Piston Ring", image: "images/Piston Ring Set A.png" },
   { name: "Liner Model X", category: "Liner", image: "images/Liner Model X.png" },
-  { name: "ELGI Compressor Valve", category: "Elgi Compressor Item", image: "images/ELGI Compressor Valve.png" },
-  // Add more products here...
+  { name: "ELGI Compressor Valve", category: "Elgi Compressor Item", image: "images/ELGI Compressor Valve.png" }
 ];
 
-// Get elements
+// DOM elements
 const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("searchInput");
 const categorySelect = document.getElementById("categorySelect");
 
-// Render function
+// Render products
 function renderProducts(filteredProducts) {
   gallery.innerHTML = "";
 
@@ -28,9 +27,7 @@ function renderProducts(filteredProducts) {
     const img = document.createElement("img");
     img.src = product.image;
     img.alt = product.name;
-    img.onerror = function () {
-      this.src = "images/placeholder.png"; // Fallback if image not found
-    };
+    img.onerror = () => img.src = "images/placeholder.png";
 
     const name = document.createElement("p");
     name.textContent = product.name;
@@ -43,19 +40,19 @@ function renderProducts(filteredProducts) {
 
 // Filter function
 function filterProducts() {
-  const searchTerm = searchInput.value.toLowerCase();
-  const selectedCategory = categorySelect.value;
+  const term = searchInput.value.toLowerCase();
+  const category = categorySelect.value;
 
   const filtered = products.filter(product => {
-    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm);
-    return matchesCategory && matchesSearch;
+    const matchCategory = category === "All" || product.category === category;
+    const matchSearch = product.name.toLowerCase().includes(term);
+    return matchCategory && matchSearch;
   });
 
   renderProducts(filtered);
 }
 
-// Event listeners
+// Events
 searchInput.addEventListener("input", filterProducts);
 categorySelect.addEventListener("change", filterProducts);
 
