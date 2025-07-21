@@ -130,7 +130,16 @@ const products = [
 const gallery = document.getElementById("gallery");
 const searchInput = document.getElementById("searchInput");
 
+let lastRendered = [];
+
+function areProductsEqual(a, b) {
+  if (a.length !== b.length) return false;
+  return a.every((prod, i) => prod.name === b[i].name && prod.image === b[i].image);
+}
+
 function displayProducts(productList) {
+  if (areProductsEqual(productList, lastRendered)) return; // No change, skip re-render
+
   gallery.innerHTML = "";
   productList.forEach(product => {
     const div = document.createElement("div");
@@ -141,12 +150,16 @@ function displayProducts(productList) {
     `;
     gallery.appendChild(div);
   });
+
+  lastRendered = productList;
 }
 
+// Initial load
+displayProducts(products);
+
+// Filter and update on input
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = products.filter(p => p.name.toLowerCase().includes(query));
   displayProducts(filtered);
 });
-
-displayProducts(products);
