@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
-  background-color: #fff9c4; /* Light yellow */
+  background-color: #fff9c4;
 }
 
 .main-heading {
@@ -19,10 +19,18 @@ body {
 #searchBarWrapper {
   position: sticky;
   top: 0;
-  background-color: #fff9c4; /* MATCHED to body */
+  background-color: #fff9c4;
   padding: 10px 0;
   z-index: 1000;
   text-align: center;
+}
+
+.search-dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: relative;
 }
 
 #searchInput {
@@ -31,6 +39,44 @@ body {
   max-width: 400px;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+#dropdownToggle {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#dropdownList {
+  list-style: none;
+  padding: 5px 0;
+  margin: 5px 0 0 0;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+#dropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#dropdownList li:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
 }
 
 .gallery {
@@ -68,47 +114,4 @@ body {
   line-height: 1.2;
   word-wrap: break-word;
   white-space: normal;
-}
-
-/* Dropdown styles */
-.dropdown-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-#categoryToggle {
-  font-size: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-#categoryMenu {
-  display: none;
-  position: absolute;
-  top: 30px;
-  right: 0;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  width: 180px;
-}
-
-.category-option {
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 14px;
-  border-bottom: 1px solid #eee;
-}
-
-.category-option:last-child {
-  border-bottom: none;
-}
-
-.category-option:hover {
-  background-color: #f0f0f0;
 }
