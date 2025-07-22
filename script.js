@@ -1,9 +1,9 @@
 const products = [
-  { name: "Cylinder Block", image: "images/Cylinder Block.png" },
+  { name: "Cylinder Block", image: "images/Cylinder Block.png" category: "Cylinder Block"  },
   { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png" },
   { name: "CYL IR 1.75 (2340)", image: "images/CYL IR 1.75 (2340).png" },
   { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png" },
-  { name: "CYL IR 2.5 (2475)", image: "images/CYL IR 2.5 (2475).png" },
+  { name: "CYL IR 2.5 (2475)", image: "images/CYL IR 2.5 (2475).png" category: "Cylinder Block"  },
   { name: "CYL IR 2.75 (2545)", image: "images/CYL IR 2.75 (2545).png" },
   { name: "CYL IR 3 (234)", image: "images/CYL IR 3 (234).png" },
   { name: "CYL IR 3 (253) F Line", image: "images/CYL IR 3 (253) F Line.png" },
