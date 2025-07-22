@@ -5,14 +5,33 @@
   <title>Product Gallery</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Sticky filter bar */
+    .sticky-filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #fff7c2; /* Match your site background */
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Optional: Add spacing below the sticky bar */
+    .container {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- Filter Bar: Category + Search -->
-  <div class="filter-bar">
+  <!-- Sticky Filter Bar -->
+  <div class="sticky-filter-bar">
     <select id="categoryFilter" onchange="filterProducts()">
       <option value="All">All Categories</option>
       <option value="Piston Ring">Piston Ring</option>
