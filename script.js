@@ -16,6 +16,7 @@ const products = [
   { name: "CYL IR 5 T Line", image: "images/CYL IR 5 T Line.png" },
   { name: "CYL IR 5.5", image: "images/CYL IR 5.5.png" },
 
+   { name: "Piston", image: "images/Piston.png" },
   { name: "PISTON IR 1.75(234) (C.I.)", image: "images/PISTON IR 1.75(234) (C.I.).png" },
   { name: "PISTON IR 1.75(2340) (C.I.)", image: "images/PISTON IR 1.75(2340) (C.I.).png" },
   { name: "PISTON IR 2.5 (242) (C.I.)", image: "images/PISTON IR 2.5 (242) (C.I.).png" },
