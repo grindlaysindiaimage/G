@@ -3,47 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Product Gallery</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    /* Optional: extra style if you want to keep everything inside HTML */
-    .main-heading {
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    /* Sticky filter bar */
-    .sticky-filter-bar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: #fff9c4; /* same as site background */
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .sticky-filter-bar select,
-    .sticky-filter-bar input {
-      padding: 12px 18px;
-      font-size: 18px;
-      border-radius: 6px;
-      border: 1px solid #333;
-      min-width: 240px;
-      box-sizing: border-box;
-    }
-
-    .container {
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -60,15 +21,16 @@
       <option value="Elgi Item">Elgi Item</option>
     </select>
 
-    <input type="text" id="searchInput" placeholder="Search Products">
+    <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
   </div>
 
   <!-- Product Gallery -->
   <div class="container">
-    <div class="gallery" id="gallery"></div>
+    <div class="gallery" id="gallery">
+      <!-- Product cards will be injected via JavaScript -->
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-ss
