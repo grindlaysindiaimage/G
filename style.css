@@ -1,3 +1,4 @@
+/* 🌟 Global Styles */
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -5,11 +6,13 @@ body {
   background-color: #fff9c4; /* Light yellow */
 }
 
+/* 🏷️ Main Heading */
 .main-heading {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 /* ✅ Sticky Filter Bar */
@@ -26,6 +29,7 @@ body {
   flex-wrap: wrap;
   border-bottom: 1px solid #ccc;
   max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* 🔄 Input + Dropdown */
@@ -33,16 +37,25 @@ body {
 .filter-bar input {
   padding: 12px 18px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #333;
-  min-width: 240px;
+  min-width: 250px;
   box-sizing: border-box;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #000;
+  outline: none;
 }
 
 /* 🧱 Container */
 .container {
-  margin-left: 0;
+  margin: 0 auto;
   padding: 10px 0;
+  max-width: 1200px;
 }
 
 /* 🖼️ Product Gallery Grid */
@@ -56,19 +69,25 @@ body {
 
 /* ✅ Product Card */
 .product {
-  width: 180px;
+  width: 200px;
   height: 280px;
   background-color: white;
   border: 2px solid #333;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   box-sizing: border-box;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* 🖼️ Uniform Image Styling */
@@ -93,11 +112,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000;
 }
 
 /* 🪧 Coming Soon Styling */
 .coming-soon {
   font-size: 16px;
   font-weight: bold;
-  color: #000;
+  color: #d32f2f;
 }
