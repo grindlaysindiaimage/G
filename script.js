@@ -1,3 +1,7 @@
+const gallery = document.getElementById("gallery");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+
 const products = [
   { name: "Cylinder Block", image: "images/Cylinder Block.png", category: "Cylinder Block"  },
   { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png" },
@@ -129,9 +133,6 @@ const products = [
   { name: "Demo", image: "images/CYL IR 1.75 (234).png" }
 ];
 
-const gallery = document.getElementById("gallery");
-const searchInput = document.getElementById("searchInput");
-
 function displayProducts(productList) {
   gallery.innerHTML = "";
   productList.forEach(product => {
@@ -145,10 +146,23 @@ function displayProducts(productList) {
   });
 }
 
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+function filterProducts() {
+  const searchQuery = searchInput.value.toLowerCase();
+  const selectedCategory = categoryFilter.value;
+
+  const filtered = products.filter(product => {
+    const matchName = product.name.toLowerCase().includes(searchQuery);
+    const matchCategory = selectedCategory === "All" || product.category === selectedCategory;
+    return matchName && matchCategory;
+  });
+
   displayProducts(filtered);
-});
+}
+
+searchInput.addEventListener("input", filterProducts);
+categoryFilter.addEventListener("change", filterProducts);
+
+// Initial load
+displayProducts(products);
 
 displayProducts(products);
