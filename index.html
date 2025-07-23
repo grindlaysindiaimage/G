@@ -5,25 +5,64 @@
   <title>Product Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fixed Image Boxes */
+    .fixed-image {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      z-index: 999;
+      background-color: white;
+      border: 3px solid #333;
+      border-radius: 10px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 5px;
+    }
+
+    .fixed-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Positions for 5 images */
+    .img1 { top: 100px; left: 10px; }
+    .img2 { top: 220px; left: 10px; }
+    .img3 { top: 340px; left: 10px; }
+    .img4 { top: 100px; right: 10px; }
+    .img5 { top: 220px; right: 10px; }
+
+    @media (max-width: 768px) {
+      .fixed-image {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Fixed Side Images -->
+  <div class="fixed-image img1"><img src="images/fixed1.png" alt="Fixed 1"></div>
+  <div class="fixed-image img2"><img src="images/fixed2.png" alt="Fixed 2"></div>
+  <div class="fixed-image img3"><img src="images/fixed3.png" alt="Fixed 3"></div>
+  <div class="fixed-image img4"><img src="images/fixed4.png" alt="Fixed 4"></div>
+  <div class="fixed-image img5"><img src="images/fixed5.png" alt="Fixed 5"></div>
 
   <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-<!-- Sticky Filter Bar -->
-<div class="filter-bar">
-  <select id="categoryFilter" onchange="filterProducts()">
-    <option value="All">All Categories</option>
-    <option value="Piston Ring">Piston Ring</option>
-    <option value="Piston">Piston</option>
-    <option value="Cylinder Block">Cylinder Block</option>
-    <option value="Elgi Item">Elgi Item</option>
-  </select>
+  <!-- Sticky Filter Bar -->
+  <div class="filter-bar">
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="All">All Categories</option>
+      <option value="Piston Ring">Piston Ring</option>
+      <option value="Piston">Piston</option>
+      <option value="Cylinder Block">Cylinder Block</option>
+      <option value="Elgi Item">Elgi Item</option>
+    </select>
 
-  <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
-</div>
-
+    <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
+  </div>
 
   <!-- Product Gallery -->
   <div class="container">
