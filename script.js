@@ -63,7 +63,7 @@ const products = [
 
   { name: "PISTON ANESTA I WATA 50 (2+1) STD", image: "images/Anesta 50.png", category: "Piston"    },
 
-  { name: "PISTON HONDA GK 100 STD", image: "images/Blank.png", category: "Piston"    },
+  { name: "PISTON HONDA GK 100 STD", image: "images/Honda 100.jpeg", category: "Piston"    },
     { name: "PISTON HONDA GK 52mm 100 (2+1) 010", image: "images/Honda 100.jpeg", category: "Piston"    },
     { name: "PISTON HONDA GK 52mm 100 (2+1) 020", image: "images/Honda 100.jpeg", category: "Piston"    },
     { name: "PISTON HONDA GK 52mm 100 (2+1) 030", image: "images/Honda 100.jpeg", category: "Piston"    },
