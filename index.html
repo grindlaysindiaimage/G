@@ -1,135 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Product Gallery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRINDTECH PRODUCT</title>
   <style>
-    /* Background Video Styling */
-    #bg-video {
-      position: fixed;
+    /* 🌟 Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background-color: #fff9c4; /* Light yellow */
+    }
+
+    /* 🏷️ Main Heading */
+    .main-heading {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #f1c40f;
+      text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+    }
+
+    /* ✅ Sticky Filter Bar */
+    .filter-bar {
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      pointer-events: none;
+      z-index: 1000;
+      background: transparent;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+      max-width: 100%;
     }
 
-    /* Fixed Image Boxes */
-    .fixed-image {
-      position: fixed;
-      z-index: 999;
+    /* 🔄 Input + Dropdown */
+    .filter-bar select,
+    .filter-bar input {
+      padding: 12px 18px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      min-width: 250px;
+      box-sizing: border-box;
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      box-shadow: 3px 3px 8px #ccc, -3px -3px 8px #fff;
+    }
+
+    .filter-bar input:focus,
+    .filter-bar select:focus {
+      border-color: #000;
+      outline: none;
+    }
+
+    /* 🧱 Container */
+    .container {
+      margin: 0 auto;
+      padding: 10px 0;
+      max-width: 1200px;
+    }
+
+    /* 🖼️ Product Gallery Grid */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* ✅ Product Card */
+    .product {
+      width: 200px;
+      height: 280px;
       background-color: white;
-      border: 3px solid #333;
+      border: 2px solid #333;
       border-radius: 10px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-      padding: 5px;
-      overflow: hidden;
-      transition: none; /* Zoom disable */
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
     }
 
-    .fixed-image:hover {
-      transform: none; /* No zoom on fixed images */
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .fixed-image img {
+    /* 🖼️ Uniform Image Styling with ISO-Style 3D effect */
+    .product img {
       width: 100%;
-      height: 100%;
+      height: 150px;
       object-fit: contain;
-      pointer-events: none;
+      border-radius: 12px;
+      background-color: #f5f5f5;
+      padding: 8px;
+      border: 1px solid #b0b0b0;
+      box-shadow:
+        4px 4px 8px rgba(0, 0, 0, 0.4),
+        -4px -4px 6px rgba(255, 255, 255, 0.8),
+        inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Positions for 8 images - Desktop */
-    .img1 { top: 270px; left: 10px; width: 130px; height: 110px; }
-    .img2 { top: 400px; left: 10px; width: 130px; height: 110px; }
-    .img3 { top: 530px; left: 10px; width: 130px; height: 110px; }
-    .img4 { top: 270px; right: 10px; width: 130px; height: 110px; }
-    .img5 { top: 400px; right: 10px; width: 130px; height: 110px; }
-    .img6 { top: 530px; right: 10px; width: 130px; height: 110px; }
-    .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
-    .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
-
-    /* ✅ Mobile Responsive Styles - Freeze Position */
-    @media (max-width: 768px) {
-      .fixed-image {
-        width: 60px;
-        height: 60px;
-        padding: 2px;
-        opacity: 0.9;
-        transform: none !important;
-      }
-
-      .fixed-image:hover {
-        transform: none !important;
-      }
-
-      .img1 { top: 30vh; left: 5px; }
-      .img2 { top: 42vh; left: 5px; }
-      .img3 { top: 54vh; left: 5px; }
-      .img4 { top: 30vh; right: 5px; }
-      .img5 { top: 42vh; right: 5px; }
-      .img6 { top: 54vh; right: 5px; }
-      .img7 { top: 66vh; left: 5px; }
-      .img8 { top: 66vh; right: 5px; }
+    .product img:not(.fixed):hover {
+      transform: scale(1.2);
+      box-shadow:
+        5px 5px 10px rgba(0, 0, 0, 0.5),
+        -3px -3px 6px rgba(255, 255, 255, 0.7),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.25),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.5);
     }
 
-    /* 🔍 Gallery Image Zoom Effect */
-    .gallery img {
-      transition: transform 0.3s ease;
+    /* 📝 Product Name */
+    .product p {
+      font-size: 14px;
+      margin: 0;
+      padding: 10px 0 0;
+      text-align: center;
+      word-wrap: break-word;
+      line-height: 1.2;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
     }
 
-    .gallery img:hover {
-      transform: scale(1.2); /* Zoom 120% */
-      z-index: 10;
+    /* 🪧 Coming Soon Styling */
+    .coming-soon {
+      font-size: 16px;
+      font-weight: bold;
+      color: #d32f2f;
     }
   </style>
 </head>
 <body>
-
-  <!-- 🔴 Background Video from Google Drive -->
-  <iframe
-    id="bg-video"
-    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview"
-    allow="autoplay"
-    frameborder="0">
-  </iframe>
-
-  <!-- Fixed Side Images -->
-  <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
-  <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
-  <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
-  <div class="fixed-image img4"><img src="images/image4.png" alt="Fixed 4"></div>
-  <div class="fixed-image img5"><img src="images/image5.png" alt="Fixed 5"></div>
-  <div class="fixed-image img6"><img src="images/image6.png" alt="Fixed 6"></div>
-  <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
-  <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
-
-  <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- Sticky Filter Bar -->
   <div class="filter-bar">
-    <select id="categoryFilter" onchange="filterProducts()">
-      <option value="All">All Categories</option>
-      <option value="Piston Ring">Piston Ring</option>
-      <option value="Piston">Piston</option>
-      <option value="Cylinder Block">Cylinder Block</option>
-      <option value="Elgi Item">Elgi Item</option>
+    <select>
+      <option>All Categories</option>
     </select>
-
-    <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
+    <input type="text" placeholder="Search Products...">
   </div>
 
-  <!-- Product Gallery -->
   <div class="container">
-    <div class="gallery" id="gallery">
-      <!-- Product cards will be injected via JavaScript -->
+    <div class="gallery">
+      <!-- Sample Product -->
+      <div class="product">
+        <img src="images/Cylinder Block.png" alt="Cylinder Block">
+        <p>Cylinder Block</p>
+      </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
