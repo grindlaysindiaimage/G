@@ -27,12 +27,11 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: none; /* Zoom disable */
     }
 
     .fixed-image:hover {
-      transform: scale(0.6); /* Zoom by 60% */
-      z-index: 10000;
+      transform: none; /* No zoom on fixed images */
     }
 
     .fixed-image img {
@@ -74,6 +73,16 @@
       .img6 { top: 54vh; right: 5px; }
       .img7 { top: 66vh; left: 5px; }
       .img8 { top: 66vh; right: 5px; }
+    }
+
+    /* 🔍 Gallery Image Zoom Effect */
+    .gallery img {
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.2); /* Zoom 120% */
+      z-index: 10;
     }
   </style>
 </head>
