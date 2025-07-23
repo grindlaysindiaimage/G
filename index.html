@@ -35,6 +35,7 @@
       height: 100%;
       object-fit: contain;
       pointer-events: none;
+      transition: none !important;
     }
 
     /* Prevent zoom on fixed images */
@@ -84,11 +85,14 @@
 </head>
 <body>
 
-  <!-- ✅ Replaced iframe with real autoplay video -->
-  <video id="bg-video" autoplay muted loop playsinline>
-    <source src="https://drive.google.com/uc?export=download&id=1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- ✅ Google Drive Embedded Background Video (autoplay enabled via mute) -->
+  <iframe 
+    id="bg-video"
+    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview?autoplay=1&mute=1"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
 
   <!-- Fixed Side Images -->
   <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
