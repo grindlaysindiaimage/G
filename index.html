@@ -14,7 +14,6 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      object-fit: cover;
       pointer-events: none;
     }
 
@@ -28,6 +27,11 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
+      transition: none; /* Zoom disable */
+    }
+
+    .fixed-image:hover {
+      transform: none; /* No zoom on fixed images */
     }
 
     .fixed-image img {
@@ -35,12 +39,6 @@
       height: 100%;
       object-fit: contain;
       pointer-events: none;
-      transition: none !important;
-    }
-
-    /* Prevent zoom on fixed images */
-    .fixed-image img:hover {
-      transform: none !important;
     }
 
     /* Positions for 8 images - Desktop */
@@ -53,13 +51,18 @@
     .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
     .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
-    /* Mobile Responsive Styles */
+    /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
       .fixed-image {
         width: 60px;
         height: 60px;
         padding: 2px;
         opacity: 0.9;
+        transform: none !important;
+      }
+
+      .fixed-image:hover {
+        transform: none !important;
       }
 
       .img1 { top: 30vh; left: 5px; }
@@ -72,26 +75,25 @@
       .img8 { top: 66vh; right: 5px; }
     }
 
-    /* Zoom Effect Only on Gallery Images */
+    /* 🔍 Gallery Image Zoom Effect */
     .gallery img {
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2);
+      transform: scale(1.2); /* Zoom 120% */
       z-index: 10;
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Google Drive Embedded Background Video (autoplay enabled via mute) -->
-  <iframe 
+  <!-- 🔴 Background Video from Google Drive -->
+  <iframe
     id="bg-video"
-    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview?autoplay=1&mute=1"
-    frameborder="0"
+    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview"
     allow="autoplay"
-    allowfullscreen>
+    frameborder="0">
   </iframe>
 
   <!-- Fixed Side Images -->
@@ -104,7 +106,7 @@
   <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
   <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
 
-  <!-- Heading -->
+  <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
   <!-- Sticky Filter Bar -->
