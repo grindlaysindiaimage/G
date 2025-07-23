@@ -14,6 +14,7 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
+      object-fit: cover;
       pointer-events: none;
     }
 
@@ -27,11 +28,6 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
-      transition: none; /* Zoom disable */
-    }
-
-    .fixed-image:hover {
-      transform: none; /* No zoom on fixed images */
     }
 
     .fixed-image img {
@@ -39,6 +35,11 @@
       height: 100%;
       object-fit: contain;
       pointer-events: none;
+    }
+
+    /* Prevent zoom on fixed images */
+    .fixed-image img:hover {
+      transform: none !important;
     }
 
     /* Positions for 8 images - Desktop */
@@ -51,18 +52,13 @@
     .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
     .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
-    /* ✅ Mobile Responsive Styles - Freeze Position */
+    /* Mobile Responsive Styles */
     @media (max-width: 768px) {
       .fixed-image {
         width: 60px;
         height: 60px;
         padding: 2px;
         opacity: 0.9;
-        transform: none !important;
-      }
-
-      .fixed-image:hover {
-        transform: none !important;
       }
 
       .img1 { top: 30vh; left: 5px; }
@@ -75,26 +71,24 @@
       .img8 { top: 66vh; right: 5px; }
     }
 
-    /* 🔍 Gallery Image Zoom Effect */
+    /* Zoom Effect Only on Gallery Images */
     .gallery img {
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2); /* Zoom 120% */
+      transform: scale(1.2);
       z-index: 10;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔴 Background Video from Google Drive -->
-  <iframe
-    id="bg-video"
-    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview"
-    allow="autoplay"
-    frameborder="0">
-  </iframe>
+  <!-- ✅ Replaced iframe with real autoplay video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="https://drive.google.com/uc?export=download&id=1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <!-- Fixed Side Images -->
   <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
@@ -106,7 +100,7 @@
   <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
   <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
 
-  <!-- GRINDTECH Heading -->
+  <!-- Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
   <!-- Sticky Filter Bar -->
