@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Background Video Styling */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
     /* Fixed Image Boxes */
     .fixed-image {
       position: fixed;
@@ -20,7 +31,7 @@
     }
 
     .fixed-image:hover {
-      transform: scale(2.2); /* Zoom by 120% */
+      transform: scale(1.2); /* Zoom by 120% */
       z-index: 10000;
     }
 
@@ -32,14 +43,14 @@
     }
 
     /* Positions for 8 images - Desktop */
-    .img1 { top: 250px; left: 10px; width: 130px; height: 110px; }
-    .img2 { top: 380px; left: 10px; width: 130px; height: 110px; }
-    .img3 { top: 510px; left: 10px; width: 130px; height: 110px; }
-    .img4 { top: 250px; right: 10px; width: 130px; height: 110px; }
-    .img5 { top: 380px; right: 10px; width: 130px; height: 110px; }
-    .img6 { top: 510px; right: 10px; width: 130px; height: 110px; }
-    .img7 { top: 640px; left: 10px; width: 130px; height: 110px; }
-    .img8 { top: 640px; right: 10px; width: 130px; height: 110px; }
+    .img1 { top: 270px; left: 10px; width: 130px; height: 110px; }
+    .img2 { top: 400px; left: 10px; width: 130px; height: 110px; }
+    .img3 { top: 530px; left: 10px; width: 130px; height: 110px; }
+    .img4 { top: 270px; right: 10px; width: 130px; height: 110px; }
+    .img5 { top: 400px; right: 10px; width: 130px; height: 110px; }
+    .img6 { top: 530px; right: 10px; width: 130px; height: 110px; }
+    .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
+    .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
     /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
@@ -67,6 +78,14 @@
   </style>
 </head>
 <body>
+
+  <!-- 🔴 Background Video from Google Drive -->
+  <iframe
+    id="bg-video"
+    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview"
+    allow="autoplay"
+    frameborder="0">
+  </iframe>
 
   <!-- Fixed Side Images -->
   <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
