@@ -16,17 +16,19 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .fixed-image:hover {
+      transform: scale(1.8); /* Zoom by 80% */
+      z-index: 10000;
     }
 
     .fixed-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      transition: transform 0.3s ease; /* ✅ Smooth zoom */
-    }
-
-    .fixed-image:hover img {
-      transform: scale(1.8); /* ✅ 80% zoom on hover */
+      pointer-events: none;
     }
 
     /* Positions for 8 images - Desktop */
@@ -41,9 +43,16 @@
 
     /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
-      .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
+      .fixed-image {
         width: 60px;
         height: 60px;
+        padding: 2px;
+        opacity: 0.9;
+        transform: none !important;
+      }
+
+      .fixed-image:hover {
+        transform: none !important;
       }
 
       .img1 { top: 30vh; left: 5px; }
