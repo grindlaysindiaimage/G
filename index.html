@@ -9,8 +9,6 @@
     /* Fixed Image Boxes */
     .fixed-image {
       position: fixed;
-      width: 100px;
-      height: 100px;
       z-index: 999;
       background-color: white;
       border: 3px solid #333;
@@ -26,27 +24,24 @@
     }
 
     /* Positions for 5 images - Desktop */
-    .img1 { top: 180px; left: 10px; }
-    .img2 { top: 310px; left: 10px; }
-    .img3 { top: 440px; left: 10px; }
-    .img4 { top: 180px; right: 10px; }
-    .img5 { top: 310px; right: 10px; }
+    .img1 { top: 180px; left: 10px; width: 100px; height: 100px; }
+    .img2 { top: 310px; left: 10px; width: 100px; height: 100px; }
+    .img3 { top: 440px; left: 10px; width: 100px; height: 100px; }
+    .img4 { top: 180px; right: 10px; width: 100px; height: 100px; }
+    .img5 { top: 310px; right: 10px; width: 100px; height: 100px; }
 
-    /* ✅ Mobile Responsive Styles */
+    /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
-      .fixed-image {
-        position: absolute;
+      .img1, .img2, .img3, .img4, .img5 {
         width: 60px;
         height: 60px;
-        padding: 2px;
-        opacity: 0.9;
       }
 
-      .img1 { bottom: 140px; left: 10px; }
-      .img2 { bottom: 70px; left: 10px; }
-      .img3 { bottom: 10px; left: 10px; }
-      .img4 { bottom: 140px; right: 10px; }
-      .img5 { bottom: 70px; right: 10px; }
+      .img1 { top: 10vh; left: 5px; }
+      .img2 { top: 22vh; left: 5px; }
+      .img3 { top: 34vh; left: 5px; }
+      .img4 { top: 10vh; right: 5px; }
+      .img5 { top: 22vh; right: 5px; }
     }
   </style>
 </head>
