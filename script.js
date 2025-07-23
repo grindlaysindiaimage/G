@@ -24,7 +24,7 @@ const products = [
   { name: "PISTON IR 1.75(234) (C.I.)", image: "images/PISTON IR 1.75(234) (C.I.).png", category: "Piston"    },
   { name: "PISTON IR 1.75(2340) (C.I.)", image: "images/PISTON IR 1.75(2340) (C.I.).png", category: "Piston"    },
   
-  { name: "PISTON IR 2 (2+2) (Alu)", image: "images/PA-IR-2-2+2-0-ALU.jpeg", category: "Piston"    },
+  { name: "PISTON IR 2 (2+2) (Alu)", image: "images/PAISTON 2-2+2 ALU.png", category: "Piston"    },
   
   { name: "PISTON IR 2.5 (2475) (C.I.)", image: "images/PISTON IR 1.75(2340) (C.I.).png", category: "Piston"    },
   { name: "PISTON IR 2.5 (242) (C.I.)", image: "images/PISTON IR 2.5 (242) (C.I.).png", category: "Piston"    },
