@@ -25,17 +25,28 @@
       object-fit: contain;
     }
 
-    /* Positions for 5 images */
+    /* Positions for 5 images - Desktop */
     .img1 { top: 140px; left: 10px; }
     .img2 { top: 270px; left: 10px; }
     .img3 { top: 400px; left: 10px; }
     .img4 { top: 140px; right: 10px; }
     .img5 { top: 270px; right: 10px; }
 
+    /* ✅ Mobile Responsive Styles */
     @media (max-width: 768px) {
       .fixed-image {
-        display: none;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        padding: 2px;
+        opacity: 0.9;
       }
+
+      .img1 { bottom: 140px; left: 10px; }
+      .img2 { bottom: 70px; left: 10px; }
+      .img3 { bottom: 10px; left: 10px; }
+      .img4 { bottom: 140px; right: 10px; }
+      .img5 { bottom: 70px; right: 10px; }
     }
   </style>
 </head>
