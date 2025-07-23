@@ -2,131 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product Gallery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRINDTECH PRODUCT</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Background Video Styling */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    /* Fixed Image Boxes */
-    .fixed-image {
-      position: fixed;
-      z-index: 999;
-      background-color: white;
-      border: 3px solid #333;
-      border-radius: 10px;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-      padding: 5px;
-      overflow: hidden;
-      transition: none; /* Zoom disable */
-    }
-
-    .fixed-image:hover {
-      transform: none; /* No zoom on fixed images */
-    }
-
-    .fixed-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      pointer-events: none;
-    }
-
-    /* Positions for 8 images - Desktop */
-    .img1 { top: 300px; left: 10px; width: 130px; height: 110px; }
-    .img2 { top: 430px; left: 10px; width: 130px; height: 110px; }
-    .img3 { top: 560px; left: 10px; width: 130px; height: 110px; }
-    .img4 { top: 300px; right: 10px; width: 130px; height: 110px; }
-    .img5 { top: 430px; right: 10px; width: 130px; height: 110px; }
-    .img6 { top: 560px; right: 10px; width: 130px; height: 110px; }
-    .img7 { top: 690px; left: 10px; width: 130px; height: 110px; }
-    .img8 { top: 690px; right: 10px; width: 130px; height: 110px; }
-
-    /* ✅ Mobile Responsive Styles - Freeze Position */
-    @media (max-width: 768px) {
-      .fixed-image {
-        width: 60px;
-        height: 60px;
-        padding: 2px;
-        opacity: 0.9;
-        transform: none !important;
-      }
-
-      .fixed-image:hover {
-        transform: none !important;
-      }
-
-      .img1 { top: 30vh; left: 5px; }
-      .img2 { top: 42vh; left: 5px; }
-      .img3 { top: 54vh; left: 5px; }
-      .img4 { top: 30vh; right: 5px; }
-      .img5 { top: 42vh; right: 5px; }
-      .img6 { top: 54vh; right: 5px; }
-      .img7 { top: 66vh; left: 5px; }
-      .img8 { top: 66vh; right: 5px; }
-    }
-
-    /* 🔍 Gallery Image Zoom Effect (excluding fixed images) */
-    .gallery img {
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.2); /* Zoom 120% */
-      z-index: 10;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-  <!-- 🔴 Background Video from Google Drive -->
-  <iframe
-    id="bg-video"
-    src="https://drive.google.com/file/d/1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv/preview?autoplay=1&mute=1&loop=1"
-    allow="autoplay"
-    frameborder="0">
-  </iframe>
+  <!-- 🔁 Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="https://drive.google.com/uc?export=download&id=1n9rVPjLJq8sDK-uT4GYXluj8qkdIShHv" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Fixed Side Images -->
-  <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
-  <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
-  <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
-  <div class="fixed-image img4"><img src="images/image4.png" alt="Fixed 4"></div>
-  <div class="fixed-image img5"><img src="images/image5.png" alt="Fixed 5"></div>
-  <div class="fixed-image img6"><img src="images/image6.png" alt="Fixed 6"></div>
-  <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
-  <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
-
-  <!-- GRINDTECH Heading -->
+  <!-- 🧱 Main Content -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- Sticky Filter Bar -->
+  <!-- Filter Bar -->
   <div class="filter-bar">
-    <select id="categoryFilter" onchange="filterProducts()">
-      <option value="All">All Categories</option>
-      <option value="Piston Ring">Piston Ring</option>
-      <option value="Piston">Piston</option>
-      <option value="Cylinder Block">Cylinder Block</option>
-      <option value="Elgi Item">Elgi Item</option>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <!-- More options can be added dynamically -->
     </select>
-
-    <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
+    <input type="text" id="searchInput" placeholder="Search Products" />
   </div>
 
-  <!-- Product Gallery -->
-  <div class="container">
-    <div class="gallery" id="gallery">
-      <!-- Product cards will be injected via JavaScript -->
-    </div>
+  <!-- 🔲 Side Fixed Images -->
+  <div class="side-images left">
+    <img src="images/factory1.jpg" alt="Image 1" class="fixed-image">
+    <img src="images/factory2.jpg" alt="Image 2" class="fixed-image">
+    <img src="images/logo.jpg" alt="Image 3" class="fixed-image">
+  </div>
+
+  <!-- 🔲 Product Grid -->
+  <div class="product-grid" id="productGrid">
+    <!-- JS will populate product cards here -->
+  </div>
+
+  <!-- 🔲 Side Fixed Images Right -->
+  <div class="side-images right">
+    <img src="images/factory3.jpg" alt="Image 4" class="fixed-image">
+    <img src="images/logo2.jpg" alt="Image 5" class="fixed-image">
+    <img src="images/factory4.jpg" alt="Image 6" class="fixed-image">
   </div>
 
   <script src="script.js"></script>
