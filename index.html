@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Product Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* 🌟 Background Video Styling */
+    /* Background Video Styling */
     #bg-video {
       position: fixed;
       top: 0;
@@ -17,7 +18,7 @@
       pointer-events: none;
     }
 
-    /* 🌟 Fixed Image Boxes */
+    /* Fixed Image Boxes */
     .fixed-image {
       position: fixed;
       z-index: 999;
@@ -27,11 +28,11 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
-      transition: none;
+      transition: none; /* Zoom disable */
     }
 
     .fixed-image:hover {
-      transform: none;
+      transform: none; /* No zoom on fixed images */
     }
 
     .fixed-image img {
@@ -41,7 +42,7 @@
       pointer-events: none;
     }
 
-    /* 🔲 Desktop Positions */
+    /* Positions for 8 images - Desktop */
     .img1 { top: 270px; left: 10px; width: 130px; height: 110px; }
     .img2 { top: 400px; left: 10px; width: 130px; height: 110px; }
     .img3 { top: 530px; left: 10px; width: 130px; height: 110px; }
@@ -51,7 +52,7 @@
     .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
     .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
-    /* 📱 Mobile Responsive */
+    /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
       .fixed-image {
         width: 60px;
@@ -60,6 +61,11 @@
         opacity: 0.9;
         transform: none !important;
       }
+
+      .fixed-image:hover {
+        transform: none !important;
+      }
+
       .img1 { top: 30vh; left: 5px; }
       .img2 { top: 42vh; left: 5px; }
       .img3 { top: 54vh; left: 5px; }
@@ -70,102 +76,39 @@
       .img8 { top: 66vh; right: 5px; }
     }
 
-    /* 🖼️ Gallery Zoom */
+    /* 🔍 Gallery Image Zoom Effect */
     .gallery img {
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2);
+      transform: scale(1.2); /* Zoom 120% */
       z-index: 10;
-    }
-
-    /* Heading */
-    .main-heading {
-      text-align: center;
-      font-size: 2.5rem;
-      margin: 20px 0;
-      color: #222;
-    }
-
-    /* Filter Bar */
-    .filter-bar {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 10px;
-      z-index: 100;
-      backdrop-filter: blur(5px);
-    }
-
-    .filter-bar select,
-    .filter-bar input {
-      padding: 8px 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    /* Product Container */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-    }
-
-    .product-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 130px;
-      object-fit: contain;
-    }
-
-    .product-card h3 {
-      font-size: 1rem;
-      margin-top: 8px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔴 Background Video -->
-  <video id="bg-video" autoplay muted loop playsinline>
+  <!-- 🔴 Local Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="images/video (1).mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- 📌 Fixed Side Images -->
-  <div class="fixed-image img1"><img src="images/image1.png" alt="1"></div>
-  <div class="fixed-image img2"><img src="images/image2.png" alt="2"></div>
-  <div class="fixed-image img3"><img src="images/image3.png" alt="3"></div>
-  <div class="fixed-image img4"><img src="images/image4.png" alt="4"></div>
-  <div class="fixed-image img5"><img src="images/image5.png" alt="5"></div>
-  <div class="fixed-image img6"><img src="images/image6.png" alt="6"></div>
-  <div class="fixed-image img7"><img src="images/image7.png" alt="7"></div>
-  <div class="fixed-image img8"><img src="images/image8.png" alt="8"></div>
+  <!-- Fixed Side Images -->
+  <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
+  <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
+  <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
+  <div class="fixed-image img4"><img src="images/image4.png" alt="Fixed 4"></div>
+  <div class="fixed-image img5"><img src="images/image5.png" alt="Fixed 5"></div>
+  <div class="fixed-image img6"><img src="images/image6.png" alt="Fixed 6"></div>
+  <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
+  <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
 
-  <!-- 🔰 Heading -->
+  <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- 🎯 Filter Bar -->
+  <!-- Sticky Filter Bar -->
   <div class="filter-bar">
     <select id="categoryFilter" onchange="filterProducts()">
       <option value="All">All Categories</option>
@@ -178,66 +121,14 @@
     <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
   </div>
 
-  <!-- 🛒 Product Gallery -->
+  <!-- Product Gallery -->
   <div class="container">
-    <div class="gallery" id="gallery"></div>
+    <div class="gallery" id="gallery">
+      <!-- Product cards will be injected via JavaScript -->
+    </div>
   </div>
 
-  <!-- 🧠 Script Section -->
-  <script>
-    const products = [
-      { name: "CYL IR 1.75 (234)", image: "images/CYL IR 1.75 (234).png", category: "Cylinder Block" },
-      { name: "CYL IR 2.5 (242)", image: "images/CYL IR 2.5 (242).png", category: "Cylinder Block" },
-      { name: "PISTON A234", image: "images/PISTON A234.png", category: "Piston" },
-      { name: "RING-TR-42", image: "images/RING-TR-42.png", category: "Piston Ring" },
-      { name: "ELGI KIT 450", image: "images/ELGI KIT 450.png", category: "Elgi Item" },
-      { name: "PISTON RING SET", image: "images/PISTON RING SET.png", category: "Piston Ring" },
-    ];
-
-    function renderProducts(filtered = products) {
-      const gallery = document.getElementById("gallery");
-      gallery.innerHTML = "";
-      filtered.forEach(prod => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.innerHTML = `<img src="${prod.image}" alt="${prod.name}"><h3>${prod.name}</h3>`;
-        gallery.appendChild(card);
-      });
-    }
-
-    function filterProducts() {
-      const category = document.getElementById("categoryFilter").value;
-      const keyword = document.getElementById("searchInput").value.toLowerCase();
-
-      const filtered = products.filter(prod => {
-        const matchCategory = category === "All" || prod.category === category;
-        const matchSearch = prod.name.toLowerCase().includes(keyword);
-        return matchCategory && matchSearch;
-      });
-
-      renderProducts(filtered);
-    }
-
-    // 🔊 Enable Audio on Interaction
-    const video = document.getElementById("bg-video");
-    function enableAudio() {
-      if (video.muted) {
-        video.muted = false;
-        video.volume = 1.0;
-        video.play();
-        console.log("🔊 Video unmuted");
-      }
-      window.removeEventListener('scroll', enableAudio);
-      document.getElementById('categoryFilter').removeEventListener('change', enableAudio);
-      document.getElementById('searchInput').removeEventListener('input', enableAudio);
-    }
-
-    window.addEventListener('scroll', enableAudio);
-    document.getElementById('categoryFilter').addEventListener('change', enableAudio);
-    document.getElementById('searchInput').addEventListener('input', enableAudio);
-
-    // Initial Render
-    renderProducts();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
