@@ -291,7 +291,7 @@ const products = [
 { name: "G-EAC-077  (SAFETY VALVE 3/4 )", image: "images/G-EAC-077.jpeg", category: "Elgi Item"  },
 { name: "G-EAC-078  (SAFETY VALVE 3/8 )", image: "images/G-EAC-078.jpeg", category: "Elgi Item"  },
 
-
+{ name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
 
   
   { name: "Demo", image: "images/CYL IR 1.75 (234).png" },
