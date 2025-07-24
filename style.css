@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
-  background-color: #fff9c4; /* Light yellow */
+  background-color: transparent; /* 👈 Transparent background */
 }
 
 /* 🏷️ Main Heading */
