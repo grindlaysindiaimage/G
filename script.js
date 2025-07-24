@@ -120,7 +120,7 @@ const products = [
 
   { name: "PISTON ELGI 70 (2+2) STD", image: "images/ELGI 70.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) 010", image: "images/ELGI 70.jpeg", category: "Piston"    },
-  { name: "PISTON ELGI 70 (2+2) 020", image: "images/BELGI 70.jpeg", category: "Piston"    },
+  { name: "PISTON ELGI 70 (2+2) 020", image: "images/ELGI 70.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) 030", image: "images/ELGI 70.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) 040", image: "images/ELGI 70.jpeg", category: "Piston"    },
 { name: "PISTON CD170 70mm (2+2) 040", image: "images/Cd70.png", category: "Piston"    },
