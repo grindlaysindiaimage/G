@@ -14,6 +14,7 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
+      object-fit: cover;
       pointer-events: none;
     }
 
@@ -27,11 +28,11 @@
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
-      transition: none; /* Zoom disable */
+      transition: none;
     }
 
     .fixed-image:hover {
-      transform: none; /* No zoom on fixed images */
+      transform: none;
     }
 
     .fixed-image img {
@@ -51,7 +52,6 @@
     .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
     .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
-    /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
       .fixed-image {
         width: 60px;
@@ -75,24 +75,36 @@
       .img8 { top: 66vh; right: 5px; }
     }
 
-    /* 🔍 Gallery Image Zoom Effect */
+    /* Gallery Image Zoom Effect */
     .gallery img {
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2); /* Zoom 120% */
+      transform: scale(1.2);
       z-index: 10;
     }
   </style>
 </head>
 <body>
 
- <!-- 🔴 Local Background Video -->
-  <video autoplay muted loop playsinline id="bg-video">
+  <!-- 🔊 Background Video with Audio -->
+  <video loop playsinline id="bg-video">
     <source src="images/video (1).mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <!-- JavaScript to play with audio after user interaction -->
+  <script>
+    const bgVideo = document.getElementById('bg-video');
+
+    // Wait for user interaction to start video with sound
+    document.body.addEventListener('click', () => {
+      bgVideo.muted = false;
+      bgVideo.volume = 1.0;
+      bgVideo.play();
+    }, { once: true });
+  </script>
 
   <!-- Fixed Side Images -->
   <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
