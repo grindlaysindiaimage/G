@@ -6,19 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Background Video Styling */
+    /* Fullscreen Background Video */
     #bg-video {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: -1;
       object-fit: cover;
-      pointer-events: none;
+      z-index: -1;
     }
 
-    /* Fixed Image Boxes */
+    /* 🔊 Unmute Button */
+    #unmute-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Fixed Side Images */
     .fixed-image {
       position: fixed;
       z-index: 999;
@@ -42,7 +55,7 @@
       pointer-events: none;
     }
 
-    /* Positions for 8 images - Desktop */
+    /* Desktop Positions */
     .img1 { top: 270px; left: 10px; width: 130px; height: 110px; }
     .img2 { top: 400px; left: 10px; width: 130px; height: 110px; }
     .img3 { top: 530px; left: 10px; width: 130px; height: 110px; }
@@ -52,6 +65,7 @@
     .img7 { top: 660px; left: 10px; width: 130px; height: 110px; }
     .img8 { top: 660px; right: 10px; width: 130px; height: 110px; }
 
+    /* Mobile Styles */
     @media (max-width: 768px) {
       .fixed-image {
         width: 60px;
@@ -75,7 +89,7 @@
       .img8 { top: 66vh; right: 5px; }
     }
 
-    /* Gallery Image Zoom Effect */
+    /* Zoom Effect for Gallery Images */
     .gallery img {
       transition: transform 0.3s ease;
     }
@@ -84,29 +98,49 @@
       transform: scale(1.2);
       z-index: 10;
     }
+
+    /* Filter Bar */
+    .filter-bar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .main-heading {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🔊 Background Video with Audio -->
-  <video loop playsinline id="bg-video">
+  <!-- 🔴 Fullscreen Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="images/video (1).mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- JavaScript to play with audio after user interaction -->
-  <script>
-    const bgVideo = document.getElementById('bg-video');
+  <!-- 🔊 Unmute Sound Button -->
+  <button id="unmute-btn">🔊 Unmute Sound</button>
 
-    // Wait for user interaction to start video with sound
-    document.body.addEventListener('click', () => {
-      bgVideo.muted = false;
-      bgVideo.volume = 1.0;
-      bgVideo.play();
-    }, { once: true });
-  </script>
-
-  <!-- Fixed Side Images -->
+  <!-- 🖼️ Fixed Images -->
   <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
   <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
   <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
@@ -116,10 +150,10 @@
   <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
   <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
 
-  <!-- GRINDTECH Heading -->
+  <!-- 🏷️ Page Title -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
-  <!-- Sticky Filter Bar -->
+  <!-- 🔍 Filters -->
   <div class="filter-bar">
     <select id="categoryFilter" onchange="filterProducts()">
       <option value="All">All Categories</option>
@@ -128,17 +162,30 @@
       <option value="Cylinder Block">Cylinder Block</option>
       <option value="Elgi Item">Elgi Item</option>
     </select>
-
     <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
   </div>
 
-  <!-- Product Gallery -->
+  <!-- 🖼️ Product Gallery -->
   <div class="container">
     <div class="gallery" id="gallery">
-      <!-- Product cards will be injected via JavaScript -->
+      <!-- Cards inserted from script.js -->
     </div>
   </div>
 
+  <!-- 🎬 JavaScript for Unmuting -->
+  <script>
+    const bgVideo = document.getElementById('bg-video');
+    const unmuteBtn = document.getElementById('unmute-btn');
+
+    unmuteBtn.addEventListener('click', () => {
+      bgVideo.muted = false;
+      bgVideo.volume = 1.0;
+      bgVideo.play();
+      unmuteBtn.style.display = 'none';
+    });
+  </script>
+
+  <!-- 🧠 Product Loading Script -->
   <script src="script.js"></script>
 </body>
 </html>
