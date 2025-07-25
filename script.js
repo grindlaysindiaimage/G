@@ -117,7 +117,7 @@ const products = [
   { name: "PISTON KG 70 (3+1) 020", image: "images/Kg 70.jpeg", category: "Piston"    },
   { name: "PISTON KG 70 (3+1) 030", image: "images/Kg 70.jpeg", category: "Piston"    },
   { name: "PISTON KG 70 (3+1) 040", image: "images/Kg 70.jpeg", category: "Piston"    },
-
+{ name: "PISTON ELGI 70 3D SHORT LENGTH (2+2) STD", image: "images/70 3DSL.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) STD", image: "images/ELGI 70.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) 010", image: "images/ELGI 70.jpeg", category: "Piston"    },
   { name: "PISTON ELGI 70 (2+2) 020", image: "images/ELGI 70.jpeg", category: "Piston"    },
@@ -296,7 +296,8 @@ const products = [
   { name: "ELGI HEAD 50", image: "images/ELGI HEAD 50.png", category: "Head"  },
   { name: "ELGI HEAD 60", image: "images/ELGI HEAD 60.png", category: "Head"  },
   { name: "ELGI HEAD 70", image: "images/ELGI HEAD 70.png", category: "Head"  },
-  { name: "ELGI STRIP HEAD 100", image: "images/ELGI HEAD 100.png", category: "Head"  },
+  { name: "ELGI STRIP TYPE HEAD 100", image: "images/ELGI HEAD 100.png", category: "Head"  },
+  { name: "ELGI DISK VALVE TYPE HEAD 100", image: "images/Head Disk valve type 100.jpeg", category: "Head"  },
   { name: "ATLAS HEAD 130", image: "images/Atlas head 130.jpeg", category: "Head"  },
   { name: "ATLAS HEAD 220", image: "images/Atlas head 220.jpeg", category: "Head"  },
 
