@@ -18,61 +18,21 @@
       pointer-events: none;
     }
 
-    /* 🔄 Auto Scrolling Side Containers */
-    .fixed-scroll {
-      position: fixed;
-      width: 140px;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 999;
-      top: 0;
-    }
-
-    .left-scroll {
-      left: 10px;
-    }
-
-    .right-scroll {
-      right: 10px;
-    }
-
-    .scroll-wrapper {
-      display: flex;
-      flex-direction: column;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-
-    .left-scroll .scroll-wrapper {
-      animation-name: scroll-down;
-      animation-duration: 40s;
-    }
-
-    .right-scroll .scroll-wrapper {
-      animation-name: scroll-up;
-      animation-duration: 40s;
-    }
-
-    @keyframes scroll-down {
-      0% { transform: translateY(-50%); }
-      100% { transform: translateY(0); }
-    }
-
-    @keyframes scroll-up {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
-    }
-
+    /* Fixed Image Boxes */
     .fixed-image {
-      width: 130px;
-      height: 110px;
-      margin: 10px auto;
+      position: fixed;
+      z-index: 999;
       background-color: white;
       border: 3px solid #333;
       border-radius: 10px;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
+      transition: none; /* Zoom disable */
+    }
+
+    .fixed-image:hover {
+      transform: none; /* No zoom on fixed images */
     }
 
     .fixed-image img {
@@ -82,130 +42,84 @@
       pointer-events: none;
     }
 
-    /* ✅ Mobile Responsive Styles */
+    /* Positions for 12 images - Desktop */
+    .img1 { top: 30px; left: 10px; width: 130px; height: 110px; }
+    .img2 { top: 160px; left: 10px; width: 130px; height: 110px; }
+    .img3 { top: 290px; left: 10px; width: 130px; height: 110px; }
+    .img4 { top: 30px; right: 10px; width: 130px; height: 110px; }
+    .img5 { top: 160px; right: 10px; width: 130px; height: 110px; }
+    .img6 { top: 290px; right: 10px; width: 130px; height: 110px; }
+    .img7 { top: 420px; left: 10px; width: 130px; height: 110px; }
+    .img8 { top: 420px; right: 10px; width: 130px; height: 110px; }
+    .img9 { top: 550px; left: 10px; width: 130px; height: 110px; }
+    .img10 { top: 550px; right: 10px; width: 130px; height: 110px; }
+        .img11 { top: 680px; left: 10px; width: 130px; height: 110px; }
+    .img12 { top: 680px; right: 10px; width: 130px; height: 110px; }
+    /* ✅ Mobile Responsive Styles - Freeze Position */
     @media (max-width: 768px) {
-      .fixed-scroll {
-        width: 70px;
-      }
-
-      .left-scroll {
-        left: 2px;
-      }
-
-      .right-scroll {
-        right: 2px;
-      }
-
       .fixed-image {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
         padding: 2px;
-        margin: 8px auto;
-        opacity: 0.95;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        opacity: 0.9;
+        transform: none !important;
       }
 
-      .fixed-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+      .fixed-image:hover {
+        transform: none !important;
       }
+
+      .img1 { top: 2vh; left: 5px; }
+      .img2 { top: 12vh; left: 5px; }
+      .img3 { top: 22vh; left: 5px; }
+      .img4 { top: 2vh; right: 5px; }
+      .img5 { top: 12vh; right: 5px; }
+      .img6 { top: 22vh; right: 5px; }
+      .img7 { top: 32vh; left: 5px; }
+      .img8 { top: 32vh; right: 5px; }
+      .img9 { top: 42vh; left: 5px; }
+      .img10 { top: 42vh; right: 5px; }
+      .img11 { top: 52vh; left: 5px; }
+      .img12 { top: 52vh; right: 5px; }
     }
 
-    /* 🔍 Zoom Effect */
+    /* 🔍 Gallery Image Zoom Effect */
     .gallery img {
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.2);
+      transform: scale(1.2); /* Zoom 120% */
       z-index: 10;
-    }
-
-    /* Heading & Filter Bar Placeholder */
-    .main-heading {
-      color: white;
-      text-align: center;
-      margin-top: 50px;
-      font-size: 36px;
-      text-shadow: 2px 2px 5px black;
-    }
-
-    .filter-bar {
-      position: sticky;
-      top: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      z-index: 10;
-    }
-
-    .container {
-      margin-top: 120px;
-      padding: 0 160px;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🎬 Background Video -->
+  <!-- 🔴 Local Background Video -->
   <video autoplay muted loop playsinline id="bg-video">
     <source src="images/video (1).mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- ⬇ Left Auto Scroll -->
-  <div class="fixed-scroll left-scroll">
-    <div class="scroll-wrapper">
-      <!-- Original -->
-      <div class="fixed-image"><img src="images/image1.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image2.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image3.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image7.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image9.jpeg" alt=""></div>
-      <div class="fixed-image"><img src="images/image11.jpeg" alt=""></div>
-      <!-- Duplicate -->
-      <div class="fixed-image"><img src="images/image1.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image2.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image3.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image7.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image9.jpeg" alt=""></div>
-      <div class="fixed-image"><img src="images/image11.jpeg" alt=""></div>
-    </div>
-  </div>
-
-  <!-- ⬆ Right Auto Scroll -->
-  <div class="fixed-scroll right-scroll">
-    <div class="scroll-wrapper">
-      <!-- Original -->
-      <div class="fixed-image"><img src="images/image4.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image5.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image6.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image8.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image10.jpeg" alt=""></div>
-      <div class="fixed-image"><img src="images/image12.jpeg" alt=""></div>
-      <!-- Duplicate -->
-      <div class="fixed-image"><img src="images/image4.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image5.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image6.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image8.png" alt=""></div>
-      <div class="fixed-image"><img src="images/image10.jpeg" alt=""></div>
-      <div class="fixed-image"><img src="images/image12.jpeg" alt=""></div>
-    </div>
-  </div>
-
-  <!-- 🧱 Page Content -->
+  <!-- Fixed Side Images -->
+  <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
+  <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
+  <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
+  <div class="fixed-image img4"><img src="images/image4.png" alt="Fixed 4"></div>
+  <div class="fixed-image img5"><img src="images/image5.png" alt="Fixed 5"></div>
+  <div class="fixed-image img6"><img src="images/image6.png" alt="Fixed 6"></div>
+  <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
+  <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
+ <div class="fixed-image img9"><img src="images/image9.jpeg" alt="Fixed 8"></div>
+   <div class="fixed-image img10"><img src="images/image10.jpeg" alt="Fixed 8"></div>
+   <div class="fixed-image img11"><img src="images/image11.jpeg" alt="Fixed 8"></div>
+   <div class="fixed-image img12"><img src="images/image12.jpeg" alt="Fixed 8"></div>
+  
+  <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
+  <!-- Sticky Filter Bar -->
   <div class="filter-bar">
     <select id="categoryFilter" onchange="filterProducts()">
       <option value="All">All Categories</option>
@@ -218,12 +132,14 @@
     <input type="text" id="searchInput" placeholder="Search Products" onkeyup="filterProducts()">
   </div>
 
+  <!-- Product Gallery -->
   <div class="container">
     <div class="gallery" id="gallery">
-      <!-- Products will be loaded here by script.js -->
+      <!-- Product cards will be injected via JavaScript -->
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
