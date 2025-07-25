@@ -293,6 +293,15 @@ const products = [
 { name: "G-EAC-077  (SAFETY VALVE 3/4 )", image: "images/G-EAC-077.jpeg", category: "Elgi Item"  },
 { name: "G-EAC-078  (SAFETY VALVE 3/8 )", image: "images/G-EAC-078.jpeg", category: "Elgi Item"  },
 
+  { name: "ELGI HEAD 50", image: "images/ELGI HEAD 50.png", category: "Head"  },
+  { name: "ELGI HEAD 60", image: "images/ELGI HEAD 60.png", category: "Head"  },
+  { name: "ELGI HEAD 70", image: "images/ELGI HEAD 70.png", category: "Head"  },
+  { name: "ELGI HEAD 100", image: "images/ELGI HEAD 100.png", category: "Head"  },
+  { name: "ATLAS HEAD 130", image: "images/Atlas head 130.jpeg", category: "Head"  },
+  { name: "ATLAS HEAD 220", image: "images/Atlas head 220.jpeg", category: "Head"  },
+
+  { name: "ELGI 100", image: "images/100 mm Pin.jpeg", category: "Pin"  },
+  
 { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
 
   
