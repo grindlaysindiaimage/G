@@ -18,69 +18,88 @@
       pointer-events: none;
     }
 
-    /* Fixed Image Boxes */
-    .fixed-image {
+    /* 🔄 Auto Scrolling Side Containers */
+    .fixed-scroll {
       position: fixed;
+      width: 140px;
+      height: 100vh;
+      overflow: hidden;
       z-index: 999;
+    }
+
+    .left-scroll {
+      left: 10px;
+    }
+
+    .right-scroll {
+      right: 10px;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      flex-direction: column;
+      animation-duration: 25s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .left-scroll .scroll-wrapper {
+      animation-name: scroll-down;
+    }
+
+    .right-scroll .scroll-wrapper {
+      animation-name: scroll-up;
+    }
+
+    @keyframes scroll-down {
+      0% {
+        transform: translateY(-50%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+
+    .fixed-scroll .fixed-image {
+      width: 130px;
+      height: 110px;
+      margin: 10px auto;
       background-color: white;
       border: 3px solid #333;
       border-radius: 10px;
       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
       padding: 5px;
       overflow: hidden;
-      transition: none; /* Zoom disable */
     }
 
-    .fixed-image:hover {
-      transform: none; /* No zoom on fixed images */
-    }
-
-    .fixed-image img {
+    .fixed-scroll .fixed-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       pointer-events: none;
     }
 
-    /* Positions for 12 images - Desktop */
-    .img1 { top: 30px; left: 10px; width: 130px; height: 110px; }
-    .img2 { top: 160px; left: 10px; width: 130px; height: 110px; }
-    .img3 { top: 290px; left: 10px; width: 130px; height: 110px; }
-    .img4 { top: 30px; right: 10px; width: 130px; height: 110px; }
-    .img5 { top: 160px; right: 10px; width: 130px; height: 110px; }
-    .img6 { top: 290px; right: 10px; width: 130px; height: 110px; }
-    .img7 { top: 420px; left: 10px; width: 130px; height: 110px; }
-    .img8 { top: 420px; right: 10px; width: 130px; height: 110px; }
-    .img9 { top: 550px; left: 10px; width: 130px; height: 110px; }
-    .img10 { top: 550px; right: 10px; width: 130px; height: 110px; }
-        .img11 { top: 680px; left: 10px; width: 130px; height: 110px; }
-    .img12 { top: 680px; right: 10px; width: 130px; height: 110px; }
-    /* ✅ Mobile Responsive Styles - Freeze Position */
+    /* ✅ Mobile Responsive Styles */
     @media (max-width: 768px) {
-      .fixed-image {
+      .fixed-scroll {
+        width: 60px;
+      }
+
+      .fixed-scroll .fixed-image {
         width: 60px;
         height: 60px;
         padding: 2px;
         opacity: 0.9;
-        transform: none !important;
       }
-
-      .fixed-image:hover {
-        transform: none !important;
-      }
-
-      .img1 { top: 2vh; left: 5px; }
-      .img2 { top: 12vh; left: 5px; }
-      .img3 { top: 22vh; left: 5px; }
-      .img4 { top: 2vh; right: 5px; }
-      .img5 { top: 12vh; right: 5px; }
-      .img6 { top: 22vh; right: 5px; }
-      .img7 { top: 32vh; left: 5px; }
-      .img8 { top: 32vh; right: 5px; }
-      .img9 { top: 42vh; left: 5px; }
-      .img10 { top: 42vh; right: 5px; }
-      .img11 { top: 52vh; left: 5px; }
-      .img12 { top: 52vh; right: 5px; }
     }
 
     /* 🔍 Gallery Image Zoom Effect */
@@ -89,7 +108,7 @@
     }
 
     .gallery img:hover {
-      transform: scale(1.2); /* Zoom 120% */
+      transform: scale(1.2);
       z-index: 10;
     }
   </style>
@@ -102,20 +121,38 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- Fixed Side Images -->
-  <div class="fixed-image img1"><img src="images/image1.png" alt="Fixed 1"></div>
-  <div class="fixed-image img2"><img src="images/image2.png" alt="Fixed 2"></div>
-  <div class="fixed-image img3"><img src="images/image3.png" alt="Fixed 3"></div>
-  <div class="fixed-image img4"><img src="images/image4.png" alt="Fixed 4"></div>
-  <div class="fixed-image img5"><img src="images/image5.png" alt="Fixed 5"></div>
-  <div class="fixed-image img6"><img src="images/image6.png" alt="Fixed 6"></div>
-  <div class="fixed-image img7"><img src="images/image7.png" alt="Fixed 7"></div>
-  <div class="fixed-image img8"><img src="images/image8.png" alt="Fixed 8"></div>
- <div class="fixed-image img9"><img src="images/image9.jpeg" alt="Fixed 8"></div>
-   <div class="fixed-image img10"><img src="images/image10.jpeg" alt="Fixed 8"></div>
-   <div class="fixed-image img11"><img src="images/image11.jpeg" alt="Fixed 8"></div>
-   <div class="fixed-image img12"><img src="images/image12.jpeg" alt="Fixed 8"></div>
-  
+  <!-- 🔄 Left Side Auto-Scroll Images (Downward) -->
+  <div class="fixed-scroll left-scroll">
+    <div class="scroll-wrapper">
+      <div class="fixed-image"><img src="images/image1.png" alt="Fixed 1"></div>
+      <div class="fixed-image"><img src="images/image2.png" alt="Fixed 2"></div>
+      <div class="fixed-image"><img src="images/image3.png" alt="Fixed 3"></div>
+      <div class="fixed-image"><img src="images/image7.png" alt="Fixed 7"></div>
+      <div class="fixed-image"><img src="images/image9.jpeg" alt="Fixed 9"></div>
+      <div class="fixed-image"><img src="images/image11.jpeg" alt="Fixed 11"></div>
+      <!-- Duplicate for looping -->
+      <div class="fixed-image"><img src="images/image1.png" alt="Fixed 1 duplicate"></div>
+      <div class="fixed-image"><img src="images/image2.png" alt="Fixed 2 duplicate"></div>
+      <div class="fixed-image"><img src="images/image3.png" alt="Fixed 3 duplicate"></div>
+    </div>
+  </div>
+
+  <!-- 🔄 Right Side Auto-Scroll Images (Upward) -->
+  <div class="fixed-scroll right-scroll">
+    <div class="scroll-wrapper">
+      <div class="fixed-image"><img src="images/image4.png" alt="Fixed 4"></div>
+      <div class="fixed-image"><img src="images/image5.png" alt="Fixed 5"></div>
+      <div class="fixed-image"><img src="images/image6.png" alt="Fixed 6"></div>
+      <div class="fixed-image"><img src="images/image8.png" alt="Fixed 8"></div>
+      <div class="fixed-image"><img src="images/image10.jpeg" alt="Fixed 10"></div>
+      <div class="fixed-image"><img src="images/image12.jpeg" alt="Fixed 12"></div>
+      <!-- Duplicate for looping -->
+      <div class="fixed-image"><img src="images/image4.png" alt="Fixed 4 duplicate"></div>
+      <div class="fixed-image"><img src="images/image5.png" alt="Fixed 5 duplicate"></div>
+      <div class="fixed-image"><img src="images/image6.png" alt="Fixed 6 duplicate"></div>
+    </div>
+  </div>
+
   <!-- GRINDTECH Heading -->
   <h1 class="main-heading">GRINDTECH PRODUCT</h1>
 
@@ -142,4 +179,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
