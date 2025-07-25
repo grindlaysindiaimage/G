@@ -296,7 +296,7 @@ const products = [
   { name: "ELGI HEAD 50", image: "images/ELGI HEAD 50.png", category: "Head"  },
   { name: "ELGI HEAD 60", image: "images/ELGI HEAD 60.png", category: "Head"  },
   { name: "ELGI HEAD 70", image: "images/ELGI HEAD 70.png", category: "Head"  },
-  { name: "ELGI HEAD 100", image: "images/ELGI HEAD 100.png", category: "Head"  },
+  { name: "ELGI STRIP HEAD 100", image: "images/ELGI HEAD 100.png", category: "Head"  },
   { name: "ATLAS HEAD 130", image: "images/Atlas head 130.jpeg", category: "Head"  },
   { name: "ATLAS HEAD 220", image: "images/Atlas head 220.jpeg", category: "Head"  },
 
