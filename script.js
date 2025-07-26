@@ -44,7 +44,7 @@ const products = [
   { name: "CYL TV1 87.3 OM", image: "images/Tv1 87.5 OM.jpeg", category: "Cylinder Block"  },
   { name: "CYL TV1 87.3 NM (RED)", image: "images/Blank.png", category: "Cylinder Block"  },
   { name: "CYL ELGI 90 ", image: "images/Elgi 90.jpeg", category: "Cylinder Block"  },
-  { name: "CYL KG 93.6 ", image: "images/Blank.png", category: "Cylinder Block"  },
+  { name: "CYL KG 93.6 ", image: "images/KG 93.6.jpeg", category: "Cylinder Block"  },
   { name: "CYL AJIT 95", image: "images/Ajit 95.jpeg", category: "Cylinder Block"  },
   { name: "CYL ELGI 100 STRIP ", image: "images/Elgi 100 strip type.jpeg", category: "Cylinder Block"  },
   { name: "CYL ELGI 100 DISK", image: "images/Elgi 100 Disk type.jpeg", category: "Cylinder Block"  },
