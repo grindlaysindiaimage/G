@@ -61,6 +61,8 @@ const products = [
     { name: "CYL ATLAS COPCO 220 (2mm) ", image: "images/Blank.png", category: "Cylinder Block"  },
   { name: "CYL ATLAS COPCO 220 (3mm) ", image: "images/Blank.png", category: "Cylinder Block"  },
   { name: "CYL KG 220 ", image: "images/Blank.png", category: "Cylinder Block"  },
+{ name: "CYL RUSTON YMA MK-1 ", image: "images/Blank.png", category: "Cylinder Block"  },
+  { name: "CYL RUSTON YMA MV ", image: "images/Blank.png", category: "Cylinder Block"  },
 
   
 
