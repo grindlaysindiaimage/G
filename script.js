@@ -351,16 +351,15 @@ const products = [
   { name: "ELGI 100", image: "images/100 mm Pin.jpeg", category: "Pin"  },
   
 
-  { name: "Piston Ring", image: "images/PISTON RING.png", category: "Piston Ring" },
-  { name: "IR 1.75 M.TYPE (2+2) STD", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "IR 1.75 KADA TYPE (2+2) STD/020/040", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "IR 2 M.TYPE (2+2),(2+1) STD/020", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "IR 2 KADA TYPE (2+2),(2+1) STD/020/040", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring" },
-  { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring" }
-
-
+{ name: "Piston Ring", image: "images/PISTON RING.png", category: "Piston Ring"  },  
+  { name: "IR 1.75 M.TYPE (2+2) STD", image: "images/Blank.png", category: "Piston Ring"  },
+  { name: "IR 1.75 KADA TYPE (2+2) STD/020/040", image: "images/Blank.png", category: "Piston Ring"  },
+    { name: "IR 2 M.TYPE (2+2),(2+1) STD/020", image: "images/Blank.png", category: "Piston Ring"  },
+    { name: "IR 2 KADA TYPE (2+2),(2+1) STD/020/040", image: "images/Blank.png", category: "Piston Ring"  },
+    { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
+    { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
+  
+{ name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
   
 { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
 
