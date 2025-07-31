@@ -352,15 +352,30 @@ const products = [
   
 
 { name: "Piston Ring", image: "images/PISTON RING.png", category: "Piston Ring"  },  
-  { name: "IR 1.75 M.TYPE (2+2) STD", image: "images/Blank.png", category: "Piston Ring"  },
-  { name: "IR 1.75 KADA TYPE (2+2) STD/020/040", image: "images/Blank.png", category: "Piston Ring"  },
-    { name: "IR 2 M.TYPE (2+2),(2+1) STD/020", image: "images/Blank.png", category: "Piston Ring"  },
-    { name: "IR 2 KADA TYPE (2+2),(2+1) STD/020/040", image: "images/Blank.png", category: "Piston Ring"  },
-    { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
-    { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
+  { name: "IR 1.75 M-TYPE / O.E-TYPE (2+2) STD", image: "images/1.75 & 2.jpeg", category: "Piston Ring"  },
+  { name: "IR 1.75 KADA/PLAIN TYPE (2+2) STD/020", image: "images/2 & 1.75 plain type.jpeg", category: "Piston Ring"  },
+    { name: "IR 2 M-TYPE / O.E-TYPE (2+2),(2+1) STD/020", image: "images/1.75 & 2.jpeg", category: "Piston Ring"  },
+    { name: "IR 2 KADA/PLAIN TYPE (2+2),(2+1) STD/020/040", image: "images/2 & 1.75 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.50 M-TYPE / O.E-TYPE (2+2),(2+1) STD/020", image: "images/2.5 & 2.75.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.50 PLAIN TYPE (2+2) STD/020/040", image: "images/2.5 & 2.75 & 3 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.50 THIN TYPE NM (2+1) STD", image: "images/2.5 & 2.75 NM.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.75 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/2.5 & 2.75.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.75 KADA/PLAIN TYPE (2+2) STD", image: "images/2.5 & 2.75 & 3 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 2.75 THIN TYPE NM 2545 (2+1) STD", image: "images/2.5 & 2.75 NM.jpeg", category: "Piston Ring"  },
+   { name: "IR 3 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/3 & 3.5.jpeg", category: "Piston Ring"  },
+   { name: "IR 3 KADA/PLAIN TYPE (2+2) STD", image: "images/2.5 & 2.75 & 3 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 3.5 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/3 & 3.5.jpeg", category: "Piston Ring"  },
+   { name: "IR 3.5 KADA/PLAIN TYPE (2+2) STD", image: "images/3.5 & 4 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 4 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/4.jpeg", category: "Piston Ring"  },
+   { name: "IR 4 KADA/PLAIN TYPE (2+2) STD", image: "images/3.5 & 4 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 4 THIN TYPE NM (2+1) STD", image: "images/4 & 5 NM.jpeg", category: "Piston Ring"  },
+   { name: "IR 5 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/5 & 5.5.jpeg", category: "Piston Ring"  },
+   { name: "IR 5 KADA/PLAIN TYPE (2+2) STD", image: "images/5 & 5.5 plain type.jpeg", category: "Piston Ring"  },
+   { name: "IR 5 THIN TYPE NM (2+1) STD", image: "images/4 & 5 NM.jpeg", category: "Piston Ring"  },  
+    { name: "IR 5.5 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/5 & 5.5.jpeg", category: "Piston Ring"  },
+    { name: "IR 5.5 KADA/PLAIN TYPE (2+2) STD", image: "images/5 & 5.5 plain type.jpeg", category: "Piston Ring"  },
   
-{ name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
-  
+{ name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },  
 { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
 
   
