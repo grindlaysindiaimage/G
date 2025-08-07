@@ -190,6 +190,7 @@ const products = [
   { name: "PISTON APE-KIT BS3 86 (2+1) STD", image: "images/BS3 86.png", category: "Piston"    },
    { name: "PISTON APE-KIT BS2 86 (2+1) STD", image: "images/BS2 86.png", category: "Piston"    },
    { name: "PISTON TVI 87.5 (3+1) SPL STD", image: "images/Tv1 87.5 spl.jpeg", category: "Piston"    },
+     { name: "PISTON TVI 87.5 (3+1) OM STD", image: "images/Tv1 87.5 OM.png", category: "Piston"    },
 { name: "PISTON COMET 87.5 (2+2) STD", image: "images/Comet 87.5.png", category: "Piston"    },
 
   { name: "PISTON BAC 87.5 (2+2) STD", image: "images/BAC 87.5.png", category: "Piston"    },
