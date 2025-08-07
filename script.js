@@ -185,7 +185,7 @@ const products = [
   { name: "PISTON AV1 80 (3+1) STD", image: "images/Av1 80.png", category: "Piston"    },
   { name: "PISTON LOMBARDINI 82 (3+1) STD", image: "images/Lombardini 82.jpeg", category: "Piston"    },
   { name: "PISTON JVI 85 (3+1) STD", image: "images/Jv1 85.jpeg", category: "Piston"    },
-  { name: "PISTON COMET 85 (3+1) STD", image: "images/Comet 85.jpeg", category: "Piston"    },
+  { name: "PISTON COMET 85 (3+1) STD", image: "images/P_Comet 85.jpeg", category: "Piston"    },
 
   { name: "PISTON APE-KIT BS3 86 (2+1) STD", image: "images/BS3 86.png", category: "Piston"    },
    { name: "PISTON APE-KIT BS2 86 (2+1) STD", image: "images/BS2 86.png", category: "Piston"    },
@@ -231,12 +231,12 @@ const products = [
    { name: "PISTON VOTA 102 (3+2) STD", image: "images/Vota 102.jpeg", category: "Piston"    },
    { name: "PISTON USHA 102 (3+1) STD", image: "images/Usha 102.jpeg", category: "Piston"    },
 
-  { name: "PISTON KG 105 (2+2)NL STD", image: "images/Kg 105 NL.jpeg", category: "Piston"    },
-{ name: "PISTON KG 105 (3+1) STD", image: "images/Kg 105.jpeg", category: "Piston"    },
-  { name: "PISTON KG 105 (3+1) 010", image: "images/Kg 105.jpeg", category: "Piston"    },
-  { name: "PISTON KG 105 (3+1) 020", image: "images/Kg 105.jpeg", category: "Piston"    },
-  { name: "PISTON KG 105 (3+1) 030", image: "images/Kg 105.jpeg", category: "Piston"    },
-  { name: "PISTON KG 105 (3+1) 040", image: "images/Kg 105.jpeg", category: "Piston"    },
+  { name: "PISTON KG 105 (2+2)NL STD", image: "images/pKg 105 (2).jpeg", category: "Piston"    },
+{ name: "PISTON KG 105 (3+1) STD", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
+  { name: "PISTON KG 105 (3+1) 010", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
+  { name: "PISTON KG 105 (3+1) 020", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
+  { name: "PISTON KG 105 (3+1) 030", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
+  { name: "PISTON KG 105 (3+1) 040", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
   { name: "PISTON ANESTA I WATA 105 (2+1) STD", image: "images/Anesta 105.png", category: "Piston"    },
 
    { name: "PISTON LISTER 114.3 (3+2) STD", image: "images/Lister 114.3 3+2.jpeg", category: "Piston"    },
@@ -251,7 +251,7 @@ const products = [
 
   { name: "PISTON ATLAS COPCO 220 (1+2) STD", image: "images/Atlas 220.jpeg", category: "Piston"    },
 
-  { name: "PISTON KG 225 (2+2) STD", image: "images/Kg 225.jpeg", category: "Piston"    },
+  { name: "PISTON KG 225 (2+2) STD", image: "images/pKg 225.jpeg", category: "Piston"    },
   
   { name: "Elgi Compressor Part", image: "images/Elgi Compressor Part.png", category: "Elgi Item"    },
   { name: "G-EAC-001  (ARMETO SC50 )", image: "images/G-EAC-001.jpeg", category: "Elgi Item"  },
