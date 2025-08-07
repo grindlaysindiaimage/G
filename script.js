@@ -40,9 +40,9 @@ const products = [
    { name: "CYL KIRLOSKAR JV1 85", image: "images/JV1 85.jpeg", category: "Cylinder Block"  },
    { name: "CYL APE BS2 86", image: "images/Ape 86 bs3.jpeg", category: "Cylinder Block"  },
   { name: "CYL APE BS3 86", image: "images/Ape 86 bs3.jpeg", category: "Cylinder Block"  },
-  { name: "CYL TV1 87.3 NM", image: "images/Tv1 87.5 NM.jpeg", category: "Cylinder Block"  },
-  { name: "CYL TV1 87.3 OM", image: "images/Tv1 87.5 OM.jpeg", category: "Cylinder Block"  },
-  { name: "CYL TV1 87.3 NM (RED)", image: "images/Blank.png", category: "Cylinder Block"  },
+  { name: "CYL TV1 87.5 NM", image: "images/Tv1 87.5 NM.jpeg", category: "Cylinder Block"  },
+  { name: "CYL TV1 87.5 OM", image: "images/Tv1 87.5 OM.jpeg", category: "Cylinder Block"  },
+  { name: "CYL TV1 87.5 NM (RED)", image: "images/Blank.png", category: "Cylinder Block"  },
   { name: "CYL ELGI 90 ", image: "images/Elgi 90.jpeg", category: "Cylinder Block"  },
   { name: "CYL KG 93.6 ", image: "images/KG 93.6.jpeg", category: "Cylinder Block"  },
   { name: "CYL AJIT 95", image: "images/Ajit 95.jpeg", category: "Cylinder Block"  },
@@ -154,7 +154,7 @@ const products = [
 
   { name: "PISTON VILLIERS MK-25 70mm (3+1) STD NM", image: "images/Villiers MK25-70 NM.jpeg", category: "Piston"    },
    { name: "PISTON VILLIERS MK-25 70mm (3+1) 040 NM", image: "images/Villiers MK25-70 NM.jpeg", category: "Piston"    },
-  { name: "PISTON SWAN 70mm (3+1) STD", image: "images/Swan 70.jpeg", category: "Piston"    },
+  { name: "PISTON SWAN 70mm (3+1) STD", image: "images/PSwan 70.jpeg", category: "Piston"    },
   { name: "PISTON AIR COMP. KRD 70mm (2+1) 040 NM", image: "images/Krd 70.jpeg", category: "Piston"    },
 
   { name: "PISTON KG 70 (2+2)NL STD", image: "images/NL70.jpeg", category: "Piston"    },
@@ -229,7 +229,7 @@ const products = [
   { name: "PISTON BAC 100 (2+2) 040", image: "images/BAC 100.png", category: "Piston"    },
 
    { name: "PISTON VOTA 102 (3+2) STD", image: "images/Vota 102.jpeg", category: "Piston"    },
-   { name: "PISTON USHA 102 (3+1) STD", image: "images/Usha 102.jpeg", category: "Piston"    },
+   { name: "PISTON USHA 102 (3+1) STD", image: "images/PUsha 102.jpeg", category: "Piston"    },
 
   { name: "PISTON KG 105 (2+2)NL STD", image: "images/pKg 105 (2).jpeg", category: "Piston"    },
 { name: "PISTON KG 105 (3+1) STD", image: "images/pKg 105 (1).jpeg", category: "Piston"    },
