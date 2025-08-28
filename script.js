@@ -375,6 +375,11 @@ const products = [
    { name: "IR 5 THIN TYPE NM (2+1) STD", image: "images/4 & 5 NM.jpeg", category: "Piston Ring"  },  
     { name: "IR 5.5 M-TYPE / O.E-TYPE (2+2),(2+1) STD", image: "images/5 & 5.5.jpeg", category: "Piston Ring"  },
     { name: "IR 5.5 KADA/PLAIN TYPE (2+2) STD", image: "images/5 & 5.5 plain type.jpeg", category: "Piston Ring"  },
+
+{ name: "Coming Soon", image: "images/Blank.png", category: "Oil Seal"  },  
+{ name: "Coming Soon", image: "images/Blank.png", category: "Oil Seal"  },
+
+
   
 { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },  
 { name: "Coming Soon", image: "images/Blank.png", category: "Piston Ring"  },
